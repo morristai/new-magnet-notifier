@@ -1,34 +1,14 @@
 package client
 
 import (
+	c "github.com/morristai/rarbg-notifier/common"
 	"github.com/mozillazg/go-httpheader"
 	log "github.com/sirupsen/logrus"
 	"net/http"
 )
 
-type Options struct {
-	Accept                  string `header:"Accept"`
-	AcceptEncoding          string `header:"Accept-Encoding"`
-	AcceptLanguage          string `header:"Accept-Language"`
-	CacheControl            string `header:"Cache-Control"`
-	Connection              string `header:"Connection"`
-	Cookie                  string `header:"Cookie"`
-	Dnt                     string `header:"DNT"`
-	Host                    string `header:"HOST"`
-	Referer                 string `header:"Referer"`
-	SecChUa                 string `header:"sec-ch-ua"`
-	SecChUaMobile           string `header:"sec-ch-ua-mobile"`
-	SecChUaPlatform         string `header:"sec-ch-ua-platform"`
-	SecFetchDest            string `header:"Sec-Fetch-Dest"`
-	SecFetchMode            string `header:"Sec-Fetch-Mode"`
-	SecFetchSite            string `header:"Sec-Fetch-Site"`
-	SecFetchUser            string `header:"Sec-Fetch-User"`
-	UserAgent               string `header:"User-Agent"`
-	UpgradeInsecureRequests string `header:"Upgrade-Insecure-Requests"`
-}
-
 func NewHeader() http.Header {
-	opt := Options{
+	opt := c.Headers{
 		Accept:                  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
 		AcceptEncoding:          "br",
 		AcceptLanguage:          "en-US",

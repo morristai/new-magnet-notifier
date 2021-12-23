@@ -23,7 +23,7 @@ type Headers struct {
 
 type VideoInfo struct {
 	Title      string `json:"title"`
-	Year       uint16 `json:"year"`
+	Year       int    `json:"year"`
 	Poster     string `json:"poster"`
 	Size       string `json:"size"`
 	Resolution string `json:"resolution,omitempty"`
