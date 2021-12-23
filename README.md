@@ -3,13 +3,13 @@
 - https://github.com/robfig/cron
 - https://github.com/DudeofA/kyBot/blob/master/kylixor.go
 - https://github.com/go-redis/redis
-- 
+- https://github.com/uber-go/zap
 
 ## TODO
 
 1. imdb script call
 3. check 4K
-4. parse movie info
+4. Genre emoji map
 
 ## Parser (splite every dot after year! DPP5.1?)
 

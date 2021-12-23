@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	c "github.com/morristai/rarbg-notifier/common"
 	"regexp"
 	"strconv"
@@ -14,12 +13,12 @@ var (
 	resolution string
 )
 
-func MatchInfo(origin string) c.VideoInfo {
+func MatchBasic(origin string, video *c.VideoInfo) {
 	//Christmas.with.the.Chosen.The.Messengers.2021.1080p.WEBRip.x264-RARBG
 	r, _ := regexp.Compile("(^\\S*).((?:19|20)[0-9]{2})(.*)")
 	titleYear := r.FindStringSubmatch(origin)
+	// TODO: index error handling
 	title = strings.Replace(titleYear[1], ".", " ", -1)
-	fmt.Println(titleYear[2])
 	year, _ = strconv.Atoi(titleYear[2])
 	others := titleYear[3]
 	// Resolution
@@ -28,14 +27,23 @@ func MatchInfo(origin string) c.VideoInfo {
 	if len(ifResolution) != 0 {
 		resolution = ifResolution[1]
 	}
-	// Encoding
+	// TODO: Encoding
 
-	fmt.Println(resolution)
+	video.Title = title
+	video.Year = year
+	video.Resolution = resolution
+}
 
-	video := c.VideoInfo{
-		Title:      title,
-		Year:       year,
-		Resolution: resolution,
+func MatchGenre(origin string, video *c.VideoInfo) {
+	r, _ := regexp.Compile("\\sIMDB.*")
+	genre := r.ReplaceAllString(origin, "")
+	video.Genre = genre
+}
+
+func MatchRating(origin string, video *c.VideoInfo) {
+	r, _ := regexp.Compile("^.*IMDB:\\s(.*)$")
+	ifRating := r.FindStringSubmatch(origin)
+	if len(ifRating) != 0 {
+		video.Rating = ifRating[1]
 	}
-	return video
 }

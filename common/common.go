@@ -26,6 +26,7 @@ type VideoInfo struct {
 	Year       int    `json:"year"`
 	Poster     string `json:"poster"`
 	Size       string `json:"size"`
+	Genre      string `json:"genre,omitempty"`
 	Resolution string `json:"resolution,omitempty"`
 	Source     string `json:"source,omitempty"`
 	Formats    string `json:"formats,omitempty"`
@@ -33,5 +34,6 @@ type VideoInfo struct {
 	Encoding   string `json:"encoding,omitempty"`
 	Language   string `json:"language,omitempty"`
 	Imdb       string `json:"imdb,omitempty"`
+	Rating     string `json:"rating,omitempty"`
 	Others     string `json:"others,omitempty"`
 }

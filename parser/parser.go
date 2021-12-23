@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	c "github.com/morristai/rarbg-notifier/common"
 	log "github.com/sirupsen/logrus"
@@ -21,33 +20,37 @@ func ParseHighest(res io.Reader) []c.VideoInfo {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	//body > table:nth-child(6) > tbody > tr > td:nth-child(2) > div > table > tbody > tr:nth-child(2) > td > table.lista2t > tbody > tr:nth-child(2) > td:nth-child(2) > a:nth-child(1)
-	selectors := "table:nth-child(6) td:nth-child(2) table.lista2t tr.lista2 td:nth-child(2) a:nth-child(1)"
-
-	doc.Find(selectors).Each(func(i int, s *goquery.Selection) {
+	baseSelectors := "table:nth-child(6) td:nth-child(2) table.lista2t tr.lista2 td:nth-child(2) a:nth-child(1)"
+	// loop each movie
+	doc.Find(baseSelectors).Each(func(i int, s *goquery.Selection) {
 		var video c.VideoInfo
-		r, _ := regexp.Compile("^.*(https.*jpg).*$")
+		// title, year, resolution
+		title := s.Contents().Text()
+		MatchBasic(title, &video)
+		// genre
+		MatchGenre(s.Siblings().Text(), &video)
+		// rating
+		MatchRating(s.Siblings().Text(), &video)
+		// size
+		size := s.Parent().SiblingsFiltered("[width=\"100px\"]")
+		video.Size = size.Text()
+		// imdb
+		r, _ := regexp.Compile("^.*imdb=(\\S*)$")
+		imdb, ok := s.Siblings().Attr("href")
+		if ok {
+			video.Imdb = r.FindStringSubmatch(imdb)[1]
+		}
+		//jpg URL
+		r, _ = regexp.Compile("^.*(https.*jpg).*$")
 		originUrl, ok := s.Attr("onmouseover")
 		if ok {
-			jpgUrl = r.FindStringSubmatch(originUrl)[1]
-		}
-		title := s.Contents().Text()
-		if title != "" {
-			video.Title = title
-			video.Year = 2021
-			video.Poster = jpgUrl
+			video.Poster = r.FindStringSubmatch(originUrl)[1]
+		} else {
+			//log.Fatal("originUrl Not Found")
 		}
 		highestList = append(highestList, video)
 	})
-	if len(highestList) == 0 {
-		log.Error("Highest list Not found!")
-
-	} else {
-		for idx, i := range highestList {
-			fmt.Printf("%d: %s %s %s\n", idx, i.Title, i.Poster, i.Year)
-		}
-	}
 	return highestList
 }
 
