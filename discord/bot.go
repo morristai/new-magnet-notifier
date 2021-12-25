@@ -3,7 +3,9 @@ package discord
 import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	log "github.com/sirupsen/logrus"
+	c "github.com/morristai/rarbg-notifier/common"
+	"github.com/morristai/rarbg-notifier/parser"
+	"log"
 	"os"
 	"os/signal"
 	"syscall"
@@ -48,37 +50,26 @@ func Run() {
 	dg.Close()
 }
 
-func genContent() discordgo.MessageEmbed {
-	posterUrl := "https://dyncdn2.com/mimages/365221/over_opt.jpg"
-	title := "Swan.Song.2021.1080p.WEB.H264-NAISU"
-	movieUrl := "https://rarbg.to/torrents.php?category=movies"
-
-	poster := discordgo.MessageEmbedImage{
-		URL:    posterUrl,
-		Height: 300,
-		Width:  200,
-	}
-	data := discordgo.MessageEmbed{
-		Title:       title,
-		URL:         movieUrl,
-		Description: "Just some random test",
-		Image:       &poster,
-	}
-	return data
+func genContent(cache *c.LeaderboardCache) discordgo.MessageEmbed {
+	oneMovie := cache.VideoList["Dune"]
+	return oneMovie.GenDiscordMessage()
 }
 
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
+	var tmpMovie c.LeaderboardCache
+	parser.Load("./cache/1080p.json", &tmpMovie)
 	// fmt.Println(m.Content)
-	// Ignore all messages created by the bot itself
 	if m.Author.ID == s.State.User.ID {
 		return
 	}
-	// If the message is "ping" reply with "Pong!"
+
 	if m.Content == "movie" {
 		channelID := "922537842083762240"
-		data := genContent()
-		s.ChannelMessageSendEmbed(channelID, &data)
-		fmt.Println(m.ChannelID)
+		data := genContent(&tmpMovie)
+		_, err := s.ChannelMessageSendEmbed(channelID, &data)
+		if err != nil {
+			log.Panicln(err)
+		}
 	}
 
 	// check health status

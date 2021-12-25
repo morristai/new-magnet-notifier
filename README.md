@@ -4,6 +4,7 @@
 - https://github.com/DudeofA/kyBot/blob/master/kylixor.go
 - https://github.com/go-redis/redis
 - https://github.com/uber-go/zap
+- https://github.com/prometheus/client_golang
 
 ## TODO
 

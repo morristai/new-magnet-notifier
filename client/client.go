@@ -1,7 +1,7 @@
 package client
 
 import (
-	log "github.com/sirupsen/logrus"
+	"log"
 	"net/http"
 )
 
@@ -14,9 +14,9 @@ func Request(url string) *http.Response {
 	if err != nil {
 		log.Fatalln(err)
 	} else if resp.StatusCode != 200 {
-		log.Error("Response Status: ", resp.StatusCode)
+		log.Fatalln("Request Error, Response StatusCode: ", resp.StatusCode)
 	} else {
-		log.Debug("Successful get response")
+		log.Println("Request Successful")
 	}
 	return resp
 }
