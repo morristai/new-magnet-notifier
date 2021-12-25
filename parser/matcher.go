@@ -11,6 +11,7 @@ var (
 	title      string
 	year       int
 	resolution string
+	encoding   string
 )
 
 func MatchBasic(origin string, video *c.VideoInfo) {
@@ -18,20 +19,27 @@ func MatchBasic(origin string, video *c.VideoInfo) {
 	r, _ := regexp.Compile("(^\\S*).((?:19|20)[0-9]{2})(.*)")
 	titleYear := r.FindStringSubmatch(origin)
 	// TODO: index error handling
-	title = strings.Replace(titleYear[1], ".", " ", -1)
-	year, _ = strconv.Atoi(titleYear[2])
+	video.Title = strings.Replace(titleYear[1], ".", " ", -1)
+	video.Year, _ = strconv.Atoi(titleYear[2])
 	others := titleYear[3]
 	// Resolution
 	r, _ = regexp.Compile(".*((?:720|1080|2160)p).*")
 	ifResolution := r.FindStringSubmatch(others)
 	if len(ifResolution) != 0 {
-		resolution = ifResolution[1]
+		video.Resolution = ifResolution[1]
 	}
-	// TODO: Encoding
-
-	video.Title = title
-	video.Year = year
-	video.Resolution = resolution
+	// Encoding
+	r, _ = regexp.Compile("^.*\\.([xH]2\\d{2}).*")
+	ifEncoding := r.FindStringSubmatch(others)
+	if len(ifEncoding) != 0 {
+		video.Encoding = ifEncoding[1]
+	}
+	// Format
+	//r, _ = regexp.Compile("^.*\\.([xH]2\\d{2}).*")
+	//ifFormat := r.FindStringSubmatch(others)
+	//if len(ifFormat) != 0 {
+	//	format = ifFormat[1]
+	//}
 }
 
 func MatchGenre(origin string, video *c.VideoInfo) {

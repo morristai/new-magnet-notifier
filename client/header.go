@@ -3,7 +3,7 @@ package client
 import (
 	c "github.com/morristai/rarbg-notifier/common"
 	"github.com/mozillazg/go-httpheader"
-	log "github.com/sirupsen/logrus"
+	"log"
 	"net/http"
 )
 
@@ -14,7 +14,7 @@ func NewHeader() http.Header {
 		AcceptLanguage:          "en-US",
 		CacheControl:            "max-age=0",
 		Connection:              "keep-alive",
-		Cookie:                  "tcc; c_cookie=3buqk19y2s; gaDts48g=q8h5pp9t; aby=2; use_alt_cdn=1; skt=GZV8Homxwp; skt=GZV8Homxwp; gaDts48g=q8h5pp9t; ppu_main_9ef78edf998c4df1e1636c9a474d9f47=1; expla=1; ppu_sub_9ef78edf998c4df1e1636c9a474d9f47=3; ppu_delay_9ef78edf998c4df1e1636c9a474d9f47=1",
+		Cookie:                  "tcc; c_cookie=3buqk19y2s; gaDts48g=q8h5pp9t; aby=2; use_alt_cdn=1; ppu_main_9ef78edf998c4df1e1636c9a474d9f47=1; ppu_sub_9ef78edf998c4df1e1636c9a474d9f47=3",
 		Dnt:                     "1",
 		Host:                    "rarbg.to",
 		Referer:                 "https://rarbg.to/torrents.php",

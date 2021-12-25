@@ -1,21 +1,23 @@
 package parser
 
 import (
+	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	c "github.com/morristai/rarbg-notifier/common"
-	log "github.com/sirupsen/logrus"
 	"io"
+	"log"
 	"regexp"
 	"strings"
+	"time"
 )
 
 var (
-	jpgUrl        string
-	highestList   []c.VideoInfo
-	billboardList []string
+	leaderboard   c.LeaderboardCache
+	billboardList []string // only Title
 )
 
-func ParseHighest(res io.Reader) []c.VideoInfo {
+func ParseHighest(res io.Reader) *c.LeaderboardCache {
+	leaderboard.VideoList = map[string]*c.VideoInfo{} // Init
 	doc, err := goquery.NewDocumentFromReader(res)
 	if err != nil {
 		log.Fatal(err)
@@ -35,23 +37,28 @@ func ParseHighest(res io.Reader) []c.VideoInfo {
 		// size
 		size := s.Parent().SiblingsFiltered("[width=\"100px\"]")
 		video.Size = size.Text()
-		// imdb
+		// IMDB
 		r, _ := regexp.Compile("^.*imdb=(\\S*)$")
 		imdb, ok := s.Siblings().Attr("href")
 		if ok {
-			video.Imdb = r.FindStringSubmatch(imdb)[1]
+			// https://www.imdb.com/title/tt13207508/
+			imdbCode := r.FindStringSubmatch(imdb)[1]
+			video.Imdb = fmt.Sprintf("https://www.imdb.com/title/%s", imdbCode)
 		}
-		//jpg URL
+		// poster URL
 		r, _ = regexp.Compile("^.*(https.*jpg).*$")
-		originUrl, ok := s.Attr("onmouseover")
+		posterUrl, ok := s.Attr("onmouseover")
 		if ok {
-			video.Poster = r.FindStringSubmatch(originUrl)[1]
-		} else {
-			//log.Fatal("originUrl Not Found")
+			video.Poster = r.FindStringSubmatch(posterUrl)[1]
 		}
-		highestList = append(highestList, video)
+		// Rarbg URL
+		video.Url, ok = s.Attr("href")
+		video.Url = fmt.Sprintf("https://rarbg.to%s", video.Url)
+
+		leaderboard.VideoList[video.Title] = &video
 	})
-	return highestList
+	leaderboard.Time = time.Now()
+	return &leaderboard
 }
 
 func ParseBillboard(res io.Reader) []string {
@@ -71,7 +78,7 @@ func ParseBillboard(res io.Reader) []string {
 		}
 	})
 	if len(billboardList) == 0 {
-		log.Error("Rarbg Billboard Not found!")
+		log.Panicln("Rarbg Billboard Not found!")
 	} else {
 		//for idx, i := range highestList {
 		//	fmt.Printf("%d: %s\n", idx, i)
