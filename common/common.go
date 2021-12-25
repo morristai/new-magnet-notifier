@@ -1,5 +1,7 @@
 package common
 
+import "time"
+
 type Headers struct {
 	Accept                  string `header:"Accept"`
 	AcceptEncoding          string `header:"Accept-Encoding"`
@@ -21,7 +23,13 @@ type Headers struct {
 	UpgradeInsecureRequests string `header:"Upgrade-Insecure-Requests"`
 }
 
+type LeaderboardCache struct {
+	VideoList map[string]*VideoInfo
+	Time      time.Time
+}
+
 type VideoInfo struct {
+	Url        string `json:"url"`
 	Title      string `json:"title"`
 	Year       int    `json:"year"`
 	Poster     string `json:"poster"`
@@ -29,7 +37,7 @@ type VideoInfo struct {
 	Genre      string `json:"genre,omitempty"`
 	Resolution string `json:"resolution,omitempty"`
 	Source     string `json:"source,omitempty"`
-	Formats    string `json:"formats,omitempty"`
+	Format     string `json:"formats,omitempty"`
 	Audio      string `json:"audio,omitempty"`
 	Encoding   string `json:"encoding,omitempty"`
 	Language   string `json:"language,omitempty"`
