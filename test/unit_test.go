@@ -9,25 +9,32 @@ import (
 )
 
 func TestParserHighest(t *testing.T) {
-	url := "https://rarbg.to/torrents.php?category=14;48;17;44;45;47;50;51;52;42;46;54&search=1080p&order=seeders&by=DESC"
-	content := client.Request(url)
+	config := c.ReadConfig("./resources/application.yml")
+	content := client.RequestRarbg(config.Rarbg.Movie.Url1080p, config.Cache.Json1080p)
+	var preLeaderBoard *c.LeaderboardCache
 	//contentBytes, _ := io.ReadAll(content.Body)
 	//os.WriteFile("./cache/rarbg_response.html", contentBytes, 0644)
-	leaderBoard := parser.ParseHighest(content.Body)
+	leaderBoard, _ := parser.ParseHomePage(preLeaderBoard, content.Body, config.Rarbg.Headers.Cookie, config.Imdb.Cookie)
 	if len(leaderBoard.VideoList) != 15 {
 		t.Error("movie list should be 15")
+	}
+	err := parser.Save("./cache/1080p.json", leaderBoard)
+	if err != nil {
+		t.Error("Save to local cache error", err)
 	}
 }
 
 func TestMarshal(t *testing.T) {
-	var leaderBoard c.LeaderboardCache
+	config := c.ReadConfig("./resources/application.yml")
+	var leaderBoard *c.LeaderboardCache
+	var preLeaderBoard *c.LeaderboardCache
 	file, _ := os.Open("./cache/rarbg_response.html")
-	res := parser.ParseHighest(file)
+	res, _ := parser.ParseHomePage(preLeaderBoard, file, config.Rarbg.Headers.Cookie, config.Imdb.Cookie)
 	err := parser.Save("./cache/1080p.json", res)
 	if err != nil {
 		t.Error(err)
 	}
-	err = parser.Load("./cache/1080p.json", &leaderBoard)
+	err = parser.Load("./cache/1080p.json", leaderBoard)
 	if err != nil {
 		t.Error(err)
 	}

@@ -3,6 +3,9 @@ package common
 import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
+	"gopkg.in/yaml.v3"
+	"io/ioutil"
+	"log"
 	"reflect"
 )
 
@@ -23,17 +26,25 @@ func (v *VideoInfo) GenDiscordMessage() discordgo.MessageEmbed {
 }
 
 func (v *VideoInfo) GenDiscordDescription() string {
-	v.Imdb = fmt.Sprintf("[IMDB](%s)", v.Imdb)
 	description := fmt.Sprintf(
-		"Year: **%d**\nSize: **%s**\nGenre: **%s**\n**%s**\n",
-		v.Year, v.Size, v.Genre, v.Imdb,
+		// TODO: 1. IMDB emoji 2. Table view
+		"Year: **%d**\nGenre: **%s**\n",
+		v.Year, v.Genre,
 	)
-	optionalFields := map[string]bool{"Resolution": true, "Rating": true, "Encoding": true}
+	if v.ProlificReview.Mean != 0 {
+		description += fmt.Sprintf("PReview: **%.2f/%.2f**", v.ProlificReview.Mean, v.ProlificReview.Std)
+	}
+
+	optionalFields := map[string]bool{"Resolution": true, "Encoding": true, "Rating": true}
 	description += v.validFields(optionalFields)
+	description += fmt.Sprintf(" **%s**\n", fmt.Sprintf("[IMDB](%s)", v.ImdbUrl))
+	description += fmt.Sprintf("Size: **%s**\n", v.Size)
+
 	return description
 }
 
 func (v *VideoInfo) validFields(optionalFields map[string]bool) string {
+	// If struct field not nil, then append to description
 	result := ""
 	s := reflect.ValueOf(v).Elem()
 	t := s.Type()
@@ -42,9 +53,31 @@ func (v *VideoInfo) validFields(optionalFields map[string]bool) string {
 		_, ok := optionalFields[name]
 		if ok {
 			value := s.FieldByName(name).Interface()
-			result += fmt.Sprintf("%s: **%s**\n", name, value)
+			result += fmt.Sprintf("\n%s: **%s**", name, value)
 		}
 	}
-	fmt.Println(result)
 	return result
+}
+
+func ReadConfig(filePath string) *Config {
+	buf, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	config := &Config{}
+	err = yaml.Unmarshal(buf, config)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return config
+}
+
+func Contains(s []string, str string) bool {
+	for _, v := range s {
+		if v == str {
+			return true
+		}
+	}
+	return false
 }
