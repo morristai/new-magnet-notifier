@@ -1,0 +1,16 @@
+rarbg:
+  headers:
+    cookie: "tcc; c_cookie=3buqk19y2s; gaDts48g=q8h5pp9t; aby=2; use_alt_cdn=1; ppu_sub_9ef78edf998c4df1e1636c9a474d9f47=3"
+  movie:
+    url2160p: "https://rarbg.to/torrents.php?category=14;48;17;44;45;47;50;51;52;42;46;54&search=2160p&order=seeders&by=DESC"
+    url1080p: "https://rarbg.to/torrents.php?category=14;48;17;44;45;47;50;51;52;42;46;54&search=1080p&order=seeders&by=DESC"
+  tvshow:
+    url1080p: "https://rarbg.to/torrents.php?category=18;41;49&search=1080p&order=seeders&by=DESC"
+imdb:
+  cookie: "session-token=kOt4myiXt4kZ+fpMi8PE1jggB+43UUPBmHjungrEkMo0RF/4QC88ZuIceDi3Ae+lPTFvqW2sIiEnjc4b4YsYiCDg6cU/EXXw4u3DOB2JxgU3T1Gw34PHmpZL68zfJN374xKi9vNO4wA+WKB3ZBOg83Fpu2PfikmL5qkAA1f05qaNlSCLtb6Za9TefMVtgYz0z0qjwbABtC3o/XTYNRqFQg==; Domain=.imdb.com; Expires=Fri, 13-Jan-2090 07:37:53 GMT; Path=/; Secure; HttpOnly"
+cache:
+  json1080p: "./cache/1080p.json"
+  json2160p: "./cache/2160p.json"
+discord:
+  channels: ["922537842083762237"]
+  members: ["434324950950608898"]

@@ -1,6 +1,32 @@
 package common
 
-import "time"
+import (
+	"time"
+)
+
+type Config struct {
+	Rarbg struct {
+		Headers Headers
+		Movie   struct {
+			Url1080p string
+			Url2160p string
+		}
+		TvShow struct {
+			Url1080p string
+		}
+	}
+	Imdb struct {
+		Cookie string
+	}
+	Cache struct {
+		Json1080p string
+		Json2160p string
+	}
+	Discord struct {
+		Channels []string
+		Members  []string
+	}
+}
 
 type Headers struct {
 	Accept                  string `header:"Accept"`
@@ -25,23 +51,39 @@ type Headers struct {
 
 type LeaderboardCache struct {
 	VideoList map[string]*VideoInfo
+	Newest9   map[string]*VideoInfo
+	Notified  map[string]time.Time // send discord notification time
 	Time      time.Time
 }
 
 type VideoInfo struct {
-	Url        string `json:"url"`
-	Title      string `json:"title"`
-	Year       int    `json:"year"`
-	Poster     string `json:"poster"`
-	Size       string `json:"size"`
-	Genre      string `json:"genre,omitempty"`
-	Resolution string `json:"resolution,omitempty"`
-	Source     string `json:"source,omitempty"`
-	Format     string `json:"formats,omitempty"`
-	Audio      string `json:"audio,omitempty"`
-	Encoding   string `json:"encoding,omitempty"`
-	Language   string `json:"language,omitempty"`
-	Imdb       string `json:"imdb,omitempty"`
-	Rating     string `json:"rating,omitempty"`
-	Others     string `json:"others,omitempty"`
+	Url            string         `json:"url"`
+	Title          string         `json:"title"`
+	Year           int            `json:"year"`
+	Poster         string         `json:"poster"`
+	Size           string         `json:"size"`
+	Genre          string         `json:"genre,omitempty"`
+	Resolution     string         `json:"resolution,omitempty"`
+	Source         string         `json:"source,omitempty"`
+	Format         string         `json:"formats,omitempty"`
+	Audio          string         `json:"audio,omitempty"`
+	Encoding       string         `json:"encoding,omitempty"`
+	Language       string         `json:"language,omitempty"`
+	ImdbUrl        string         `json:"imdb,omitempty"`
+	ProlificReview ProlificReview `json:"prolific_review,omitempty"`
+	Rating         string         `json:"rating,omitempty"`
+	Others         string         `json:"others,omitempty"`
+	// HelpfulReview HelpfulReview `json:"helpfulReview,omitempty"`
+}
+
+type ProlificReview struct {
+	Mean float32 `json:"mean,omitempty"`
+	Std  float32 `json:"std,omitempty"`
+	// Comments
+}
+
+type HelpfulReview struct {
+	Mean float32 `json:"mean,omitempty"`
+	Std  float32 `json:"std,omitempty"`
+	// Comments
 }
