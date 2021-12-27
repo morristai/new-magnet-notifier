@@ -7,15 +7,8 @@ import (
 	"strings"
 )
 
-var (
-	title      string
-	year       int
-	resolution string
-	encoding   string
-)
-
 func MatchBasic(origin string, video *c.VideoInfo) {
-	//Christmas.with.the.Chosen.The.Messengers.2021.1080p.WEBRip.x264-RARBG
+	// e.g. Christmas.with.the.Chosen.The.Messengers.2021.1080p.WEBRip.x264-RARBG
 	r, _ := regexp.Compile("(^\\S*).((?:19|20)[0-9]{2})(.*)")
 	titleYear := r.FindStringSubmatch(origin)
 	// TODO: index error handling
@@ -34,12 +27,12 @@ func MatchBasic(origin string, video *c.VideoInfo) {
 	if len(ifEncoding) != 0 {
 		video.Encoding = ifEncoding[1]
 	}
-	// Format
-	//r, _ = regexp.Compile("^.*\\.([xH]2\\d{2}).*")
-	//ifFormat := r.FindStringSubmatch(others)
-	//if len(ifFormat) != 0 {
-	//	format = ifFormat[1]
-	//}
+	// TODO: Format
+	// r, _ = regexp.Compile("")
+	// ifFormat := r.FindStringSubmatch(others)
+	// if len(ifFormat) != 0 {
+	// 	format = ifFormat[1]
+	// }
 }
 
 func MatchGenre(origin string, video *c.VideoInfo) {
