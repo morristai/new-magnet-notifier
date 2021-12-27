@@ -3,13 +3,11 @@ package discord
 import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	c "github.com/morristai/rarbg-notifier/common"
-	"github.com/morristai/rarbg-notifier/parser"
+	"github.com/morristai/rarbg-notifier/task"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
-	"time"
 )
 
 func Run() {
@@ -34,11 +32,8 @@ func Run() {
 		return
 	}
 
-	// for testing
-	channelID := "922537842083762237"
-	message := "```go\nimport \"fmt\"```"
-	time.Sleep(5)
-	dg.ChannelMessageSend(channelID, message)
+	// Trigger cron job
+	task.CronJobs(dg)
 
 	// Wait here until CTRL-C or other term signal is received.
 	fmt.Println("Bot is now running.  Press CTRL-C to exit.")
@@ -50,33 +45,12 @@ func Run() {
 	dg.Close()
 }
 
-func genContent(cache *c.LeaderboardCache) discordgo.MessageEmbed {
-	oneMovie := cache.VideoList["Dune"]
-	return oneMovie.GenDiscordMessage()
-}
-
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
-	var tmpMovie c.LeaderboardCache
-	parser.Load("./cache/1080p.json", &tmpMovie)
-	// fmt.Println(m.Content)
-	if m.Author.ID == s.State.User.ID {
-		return
-	}
-
-	if m.Content == "movie" {
-		channelID := "922537842083762240"
-		data := genContent(&tmpMovie)
-		_, err := s.ChannelMessageSendEmbed(channelID, &data)
-		if err != nil {
-			log.Panicln(err)
-		}
-	}
-
 	// check health status
 	if m.Content == "health" {
 		_, err := s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("✅ UP (Latency: %s)", s.HeartbeatLatency()))
 		if err != nil {
-			log.Fatal(err)
+			log.Fatalln(err)
 		}
 	}
 }
