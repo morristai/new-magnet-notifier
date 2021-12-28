@@ -1,7 +1,13 @@
 # Rarbg Notifier
 A Discord bot that auto sends notifications when there's new movies
 
+**Disclaimer: This repository is for educational purposes only.**
+
 [TOC]
+
+## Workflow
+1. main -> run bot main process discord/bot.go -> trigger cron job (task/task.go)
+2. task(read config) -> processor (request Rarbg) -> parser/parser.go
 
 ## Components
 ### Parser
