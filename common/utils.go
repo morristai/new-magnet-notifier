@@ -50,8 +50,9 @@ func (v *VideoInfo) validFields(optionalFields map[string]bool) string {
 	t := s.Type()
 	for i := 0; i < t.NumField(); i++ {
 		name := t.Field(i).Name
+		field := s.FieldByName(name)
 		_, ok := optionalFields[name]
-		if ok {
+		if ok && !field.IsZero() {
 			value := s.FieldByName(name).Interface()
 			result += fmt.Sprintf("\n%s: **%s**", name, value)
 		}
