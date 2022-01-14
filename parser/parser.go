@@ -36,7 +36,7 @@ func ParseHomePage(preLeaderboard *c.LeaderboardCache, res io.Reader, rarbgCooki
 	} else if len(leaderboard.Newest9) == 0 {
 		log.Fatalln("Parse Newest9 data failed!")
 	} else {
-		log.Println("✅ Parse raw HTML successful")
+		log.Println("Parse raw HTML successful")
 	}
 	leaderboard.Time = time.Now()
 	return &leaderboard, nil
@@ -124,6 +124,7 @@ func parseLeaderBoard(s *goquery.Selection, curLeaderboard, preLeaderboard *c.Le
 			if ok {
 				video.Poster = r.FindStringSubmatch(posterUrl)[1]
 			}
+			video.Poster = strings.Replace(video.Poster, "over_opt", "poster_opt", 1) // higher resolution
 			// Rarbg URL
 			video.Url, ok = s.Attr("href")
 			video.Url = fmt.Sprintf("https://rarbg.to%s", video.Url)
