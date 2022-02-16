@@ -1,69 +1,5 @@
 {
 	"VideoList": {
-		"Cmon.Cmon.2021.1080p.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/hs9ncd3",
-			"title": "Cmon Cmon",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365352/over_opt.jpg",
-			"size": "5.72 GB",
-			"genre": "Drama",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt10986222",
-			"prolific_review": {
-				"mean": 8.13,
-				"std": 1.2
-			},
-			"rating": "7.9/10"
-		},
-		"Dont.Look.Up.2021.1080p.WEB.H264-CUPCAKES": {
-			"url": "https://rarbg.to/torrent/1w9byir",
-			"title": "Dont Look Up",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/355278/over_opt.jpg",
-			"size": "7.69 GB",
-			"genre": "Comedy, Drama, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "H264",
-			"imdb": "https://www.imdb.com/title/tt11286314",
-			"prolific_review": {
-				"mean": 7.18,
-				"std": 1.85
-			},
-			"rating": "7.3/10"
-		},
-		"Dont.Look.Up.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/5q8y239",
-			"title": "Dont Look Up",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/355278/over_opt.jpg",
-			"size": "2.73 GB",
-			"genre": "Comedy, Drama, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt11286314",
-			"prolific_review": {
-				"mean": 7.18,
-				"std": 1.85
-			},
-			"rating": "7.3/10"
-		},
-		"Dont.Look.Up.2021.1080p.WEBRip.x265-RARBG": {
-			"url": "https://rarbg.to/torrent/brdyqke",
-			"title": "Dont Look Up",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/355278/over_opt.jpg",
-			"size": "2.24 GB",
-			"genre": "Comedy, Drama, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "x265",
-			"imdb": "https://www.imdb.com/title/tt11286314",
-			"prolific_review": {
-				"mean": 7.18,
-				"std": 1.85
-			},
-			"rating": "7.3/10"
-		},
 		"Dune.2021.1080p.WEBRip.x264-RARBG": {
 			"url": "https://rarbg.to/torrent/mejn47d",
 			"title": "Dune",
@@ -80,125 +16,197 @@
 			},
 			"rating": "8.2/10"
 		},
-		"Encanto.2021.1080p.WEBRip.DDP7.1.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/s3pqj5x",
-			"title": "Encanto",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/361069/over_opt.jpg",
-			"size": "7.42 GB",
-			"genre": "Animation, Comedy, Drama, Family, Fantasy, Musical",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt2953050",
-			"prolific_review": {
-				"mean": 7.25,
-				"std": 1.74
-			},
-			"rating": "7.4/10"
-		},
 		"Encanto.2021.1080p.WEBRip.x264-RARBG": {
 			"url": "https://rarbg.to/torrent/y172wlq",
 			"title": "Encanto",
 			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/361069/over_opt.jpg",
+			"poster": "https://dyncdn2.com/mimages/361069/poster_opt.jpg",
 			"size": "1.95 GB",
 			"genre": "Animation, Comedy, Drama, Family, Fantasy, Musical",
 			"resolution": "1080p",
 			"encoding": "x264",
 			"imdb": "https://www.imdb.com/title/tt2953050",
 			"prolific_review": {
-				"mean": 7.25,
-				"std": 1.74
+				"mean": 7.42,
+				"std": 1.85
 			},
-			"rating": "7.4/10"
+			"rating": "7.3/10"
 		},
-		"Encanto.2021.1080p.WEBRip.x265-RARBG": {
-			"url": "https://rarbg.to/torrent/psdhmyk",
-			"title": "Encanto",
+		"Eternals.2021.1080p.WEBRip.DDP5.1.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/iqa1d5n",
+			"title": "Eternals",
 			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/361069/over_opt.jpg",
-			"size": "1.60 GB",
-			"genre": "Animation, Comedy, Drama, Family, Fantasy, Musical",
-			"resolution": "1080p",
-			"encoding": "x265",
-			"imdb": "https://www.imdb.com/title/tt2953050",
-			"prolific_review": {
-				"mean": 7.25,
-				"std": 1.74
-			},
-			"rating": "7.4/10"
-		},
-		"Finch.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/kjb51no",
-			"title": "Finch",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/364126/over_opt.jpg",
-			"size": "2.21 GB",
-			"genre": "Adventure, Drama, Sci-Fi",
+			"poster": "https://dyncdn2.com/mimages/359719/poster_opt.jpg",
+			"size": "5.60 GB",
+			"genre": "Action, Adventure, Fantasy, Sci-Fi",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt3420504",
+			"imdb": "https://www.imdb.com/title/tt9032400",
 			"prolific_review": {
-				"mean": 6.04,
-				"std": 2.39
+				"mean": 5.74,
+				"std": 1.62
 			},
-			"rating": "6.9/10"
+			"rating": "6.4/10"
 		},
-		"Free.Guy.2021.1080p.BluRay.H264.AAC-RARBG": {
-			"url": "https://rarbg.to/torrent/tfi91lb",
-			"title": "Free Guy",
+		"Ghostbusters.Afterlife.2021.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/1gonjrt",
+			"title": "Ghostbusters Afterlife",
 			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/344463/over_opt.jpg",
-			"size": "2.19 GB",
-			"genre": "Action, Adventure, Comedy, Fantasy, Sci-Fi",
+			"poster": "https://dyncdn2.com/mimages/335084/poster_opt.jpg",
+			"size": "2.36 GB",
+			"genre": "Adventure, Comedy, Fantasy, Sci-Fi",
 			"resolution": "1080p",
-			"encoding": "H264",
-			"imdb": "https://www.imdb.com/title/tt6264654",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt4513678",
 			"prolific_review": {
-				"mean": 7.78,
-				"std": 1.61
+				"mean": 6.91,
+				"std": 1.21
 			},
 			"rating": "7.2/10"
 		},
-		"Last.Looks.2021.1080p.WEBRip.DD5.1.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/kiovl3f",
-			"title": "Last Looks",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365447/over_opt.jpg",
-			"size": "5.19 GB",
-			"genre": "Action, Thriller ",
+		"Hotel.Transylvania.4.Transformania.2022.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/dholewt",
+			"title": "Hotel Transylvania 4 Transformania",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/338655/poster_opt.jpg",
+			"size": "1.67 GB",
+			"genre": "Animation, Adventure, Comedy, Family, Fantasy",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt9244554",
-			"prolific_review": {}
-		},
-		"Last.Looks.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/zf3h2du",
-			"title": "Last Looks",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365447/over_opt.jpg",
-			"size": "2.02 GB",
-			"genre": "Action, Thriller ",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt9244554",
-			"prolific_review": {}
-		},
-		"No.Time.To.Die.2021.1080p.AMZN.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/vylx2q9",
-			"title": "No Time To Die",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/29240/over_opt.jpg",
-			"size": "11.95 GB",
-			"genre": "Action, Adventure, Thriller",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt2382320",
+			"imdb": "https://www.imdb.com/title/tt9848626",
 			"prolific_review": {
-				"mean": 7.52,
-				"std": 1.44
+				"mean": 5.67,
+				"std": 1.62
 			},
-			"rating": "7.4/10"
+			"rating": "6.1/10"
+		},
+		"House.Of.Gucci.2021.1080p.AMZN.WEBRip.DDP5.1.Atmos.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/4omg365",
+			"title": "House Of Gucci",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/361644/poster_opt.jpg",
+			"size": "10.03 GB",
+			"genre": "Crime, Drama",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt11214590",
+			"prolific_review": {
+				"mean": 6.41,
+				"std": 1.67
+			},
+			"rating": "6.7/10"
+		},
+		"House.Of.Gucci.2021.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/b1pcqvz",
+			"title": "House Of Gucci",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/361644/poster_opt.jpg",
+			"size": "3.01 GB",
+			"genre": "Crime, Drama",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt11214590",
+			"prolific_review": {
+				"mean": 6.41,
+				"std": 1.67
+			},
+			"rating": "6.7/10"
+		},
+		"Kimi.2022.1080p.HMAX.WEBRip.DD5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/8mlcpfv",
+			"title": "Kimi",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366618/poster_opt.jpg",
+			"size": "5.36 GB",
+			"genre": "Crime, Drama, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt14128670",
+			"prolific_review": {
+				"mean": 5.63,
+				"std": 2.69
+			},
+			"rating": "6.3/10"
+		},
+		"Kimi.2022.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/zyligv2",
+			"title": "Kimi",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366618/poster_opt.jpg",
+			"size": "1.70 GB",
+			"genre": "Crime, Drama, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt14128670",
+			"prolific_review": {
+				"mean": 5.63,
+				"std": 2.69
+			},
+			"rating": "6.3/10"
+		},
+		"Marry.Me.2022.1080p.WEB.H264-NAISU": {
+			"url": "https://rarbg.to/torrent/3i5mj8l",
+			"title": "Marry Me",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366651/poster_opt.jpg",
+			"size": "5.72 GB",
+			"genre": "Comedy, Music, Romance",
+			"resolution": "1080p",
+			"encoding": "H264",
+			"imdb": "https://www.imdb.com/title/tt10223460",
+			"prolific_review": {
+				"mean": 6.38,
+				"std": 2.23
+			},
+			"rating": "6.2/10"
+		},
+		"Marry.Me.2022.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/nct4m9g",
+			"title": "Marry Me",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366651/poster_opt.jpg",
+			"size": "2.13 GB",
+			"genre": "Comedy, Music, Romance",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt10223460",
+			"prolific_review": {
+				"mean": 6.38,
+				"std": 2.23
+			},
+			"rating": "6.2/10"
+		},
+		"Nightmare.Alley.2021.1080p.HMAX.WEBRip.DD5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/1horpeg",
+			"title": "Nightmare Alley",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/366410/poster_opt.jpg",
+			"size": "9.04 GB",
+			"genre": "Crime, Drama, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt7740496",
+			"prolific_review": {
+				"mean": 6.83,
+				"std": 1.43
+			},
+			"rating": "7.2/10"
+		},
+		"Nightmare.Alley.2021.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/zrg752w",
+			"title": "Nightmare Alley",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/366410/poster_opt.jpg",
+			"size": "2.86 GB",
+			"genre": "Crime, Drama, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt7740496",
+			"prolific_review": {
+				"mean": 6.83,
+				"std": 1.43
+			},
+			"rating": "7.2/10"
 		},
 		"No.Time.To.Die.2021.1080p.WEBRip.x264-RARBG": {
 			"url": "https://rarbg.to/torrent/ndlpz7r",
@@ -216,69 +224,21 @@
 			},
 			"rating": "7.4/10"
 		},
-		"Resident.Evil.Welcome.to.Raccoon.City.2021.1080p.AMZN.WEBRip.DDP5.1.x264-CM": {
-			"url": "https://rarbg.to/torrent/63w1fkc",
-			"title": "Resident Evil Welcome to Raccoon City",
+		"Red.Rocket.2021.1080p.AMZN.WEBRip.DDP5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/oe5yn9t",
+			"title": "Red Rocket",
 			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365316/over_opt.jpg",
-			"size": "5.50 GB",
-			"genre": "Action, Horror, Sci-Fi",
+			"poster": "https://dyncdn2.com/mimages/365104/poster_opt.jpg",
+			"size": "9.52 GB",
+			"genre": "Comedy, Drama",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt6920084",
+			"imdb": "https://www.imdb.com/title/tt13453006",
 			"prolific_review": {
-				"mean": 5.6,
-				"std": 2.15
+				"mean": 6.96,
+				"std": 1.61
 			},
-			"rating": "5.2/10"
-		},
-		"Resident.Evil.Welcome.to.Raccoon.City.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/4dsh17l",
-			"title": "Resident Evil Welcome to Raccoon City",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365316/over_opt.jpg",
-			"size": "2.05 GB",
-			"genre": "Action, Horror, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt6920084",
-			"prolific_review": {
-				"mean": 5.6,
-				"std": 2.15
-			},
-			"rating": "5.2/10"
-		},
-		"Resident.Evil.Welcome.to.Raccoon.City.2021.1080p.WEBRip.x265-RARBG": {
-			"url": "https://rarbg.to/torrent/875wtjk",
-			"title": "Resident Evil Welcome to Raccoon City",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365316/over_opt.jpg",
-			"size": "1.68 GB",
-			"genre": "Action, Horror, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "x265",
-			"imdb": "https://www.imdb.com/title/tt6920084",
-			"prolific_review": {
-				"mean": 5.6,
-				"std": 2.15
-			},
-			"rating": "5.2/10"
-		},
-		"Rumble.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/k2a1nfc",
-			"title": "Rumble",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/346519/over_opt.jpg",
-			"size": "1.81 GB",
-			"genre": "Animation, Comedy, Family, Fantasy, Sport",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt8337158",
-			"prolific_review": {
-				"mean": 5.13,
-				"std": 1.99
-			},
-			"rating": "5.9/10"
+			"rating": "7.3/10"
 		},
 		"Shang-Chi.And.The.Legend.Of.The.Ten.Rings.2021.1080p.BluRay.H264.AAC-RARBG": {
 			"url": "https://rarbg.to/torrent/25gbs6l",
@@ -296,21 +256,100 @@
 			},
 			"rating": "7.5/10"
 		},
-		"The.Last.Duel.2021.1080p.AMZN.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/wfmqp8v",
-			"title": "The Last Duel",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/361423/over_opt.jpg",
-			"size": "8.29 GB",
-			"genre": "Action, Drama, History, Thriller",
+		"The.355.2022.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/ox98vpy",
+			"title": "The 355",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/352038/poster_opt.jpg",
+			"size": "2.34 GB",
+			"genre": "Action, Thriller",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt4244994",
+			"imdb": "https://www.imdb.com/title/tt8356942",
 			"prolific_review": {
-				"mean": 7.43,
-				"std": 1.95
+				"mean": 6.36,
+				"std": 1.4
 			},
-			"rating": "7.5/10"
+			"rating": "5.0/10"
+		},
+		"The.Ice.Age.Adventures.of.Buck.Wild.2022.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/v4obs8k",
+			"title": "The Ice Age Adventures of Buck Wild",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/364317/poster_opt.jpg",
+			"size": "1.55 GB",
+			"genre": "Animation, Adventure, Comedy, Family",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt13634480",
+			"prolific_review": {
+				"mean": 4.24,
+				"std": 2.78
+			},
+			"rating": "4.6/10"
+		},
+		"The.In.Between.2022.1080p.AMZN.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/mrg2ix1",
+			"title": "The In Between",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366650/poster_opt.jpg",
+			"size": "6.67 GB",
+			"genre": "Drama, Romance, Sci-Fi ",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt8851148",
+			"prolific_review": {
+				"mean": 6.44,
+				"std": 2.67
+			}
+		},
+		"The.Kings.Man.2021.1080p.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/p8b4erj",
+			"title": "The Kings Man",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/339118/poster_opt.jpg",
+			"size": "6.77 GB",
+			"genre": "Action, Adventure, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt6856242",
+			"prolific_review": {
+				"mean": 6.13,
+				"std": 1.88
+			},
+			"rating": "6.5/10"
+		},
+		"The.Kings.Man.2021.1080p.WEBRip.x264-RARBG": {
+			"url": "https://rarbg.to/torrent/1fgquns",
+			"title": "The Kings Man",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/339118/poster_opt.jpg",
+			"size": "2.49 GB",
+			"genre": "Action, Adventure, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt6856242",
+			"prolific_review": {
+				"mean": 6.13,
+				"std": 1.88
+			},
+			"rating": "6.5/10"
+		},
+		"The.Kings.Man.2021.1080p.WEBRip.x265-RARBG": {
+			"url": "https://rarbg.to/torrent/df6gl9w",
+			"title": "The Kings Man",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/339118/poster_opt.jpg",
+			"size": "2.03 GB",
+			"genre": "Action, Adventure, Thriller",
+			"resolution": "1080p",
+			"encoding": "x265",
+			"imdb": "https://www.imdb.com/title/tt6856242",
+			"prolific_review": {
+				"mean": 6.13,
+				"std": 1.88
+			},
+			"rating": "6.5/10"
 		},
 		"The.Matrix.4.Resurrections.2021.1080p.WEB.H264-NAISU": {
 			"url": "https://rarbg.to/torrent/e68w14s",
@@ -344,22 +383,6 @@
 			},
 			"rating": "5.8/10"
 		},
-		"The.Matrix.4.Resurrections.2021.1080p.WEBRip.x265-RARBG": {
-			"url": "https://rarbg.to/torrent/w95k8h4",
-			"title": "The Matrix 4 Resurrections",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/344952/over_opt.jpg",
-			"size": "2.30 GB",
-			"genre": "Action, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "x265",
-			"imdb": "https://www.imdb.com/title/tt10838180",
-			"prolific_review": {
-				"mean": 4.81,
-				"std": 2.22
-			},
-			"rating": "5.8/10"
-		},
 		"Venom.Let.There.Be.Carnage.2021.1080p.AMZN.WEBRip.DDP5.1.x264-alfaHD": {
 			"url": "https://rarbg.to/torrent/xnfyb52",
 			"title": "Venom Let There Be Carnage",
@@ -375,172 +398,183 @@
 				"std": 1.9
 			},
 			"rating": "6.0/10"
-		},
-		"Venom.Let.There.Be.Carnage.2021.1080p.WEBRip.x264-RARBG": {
-			"url": "https://rarbg.to/torrent/qvtm5l7",
-			"title": "Venom Let There Be Carnage",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/359318/over_opt.jpg",
-			"size": "1.86 GB",
-			"genre": "Action, Adventure, Sci-Fi, Thriller",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt7097896",
-			"prolific_review": {
-				"mean": 6.13,
-				"std": 1.9
-			},
-			"rating": "6.0/10"
 		}
 	},
 	"Newest9": {
-		"Being.the.Ricardos.2021.1080p.WEB.H264-NAISU": {
-			"url": "https://rarbg.to/torrent/sp8uy56",
-			"title": "Being the Ricardos",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/363693/over_opt.jpg",
-			"size": "6.38 GB",
-			"genre": "Biography, Drama, History",
-			"resolution": "1080p",
-			"encoding": "H264",
-			"imdb": "https://www.imdb.com/title/tt4995540",
-			"prolific_review": {
-				"mean": 6.73,
-				"std": 1.91
-			},
-			"rating": "6.7/10"
-		},
-		"Cmon.Cmon.2021.1080p.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/hs9ncd3",
-			"title": "Cmon Cmon",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365352/over_opt.jpg",
-			"size": "5.72 GB",
-			"genre": "Drama",
+		"Kimi.2022.1080p.HMAX.WEBRip.DD5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/8mlcpfv",
+			"title": "Kimi",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366618/poster_opt.jpg",
+			"size": "5.36 GB",
+			"genre": "Crime, Drama, Thriller",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt10986222",
+			"imdb": "https://www.imdb.com/title/tt14128670",
 			"prolific_review": {
-				"mean": 8.13,
-				"std": 1.2
+				"mean": 5.63,
+				"std": 2.69
 			},
-			"rating": "7.9/10"
+			"rating": "6.3/10"
 		},
-		"Dont.Look.Up.2021.1080p.WEB.H264-CUPCAKES": {
-			"url": "https://rarbg.to/torrent/1w9byir",
-			"title": "Dont Look Up",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/355278/over_opt.jpg",
-			"size": "7.69 GB",
-			"genre": "Comedy, Drama, Sci-Fi",
+		"Last.Survivors.2022.1080p.WEBRip.DD5.1.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/atbhp2g",
+			"title": "Last Survivors",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366480/poster_opt.jpg",
+			"size": "4.90 GB",
+			"genre": "Sci-Fi, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt13889602",
+			"prolific_review": {
+				"mean": 4.12,
+				"std": 2.78
+			},
+			"rating": "4.6/10"
+		},
+		"Marry.Me.2022.1080p.WEB.H264-NAISU": {
+			"url": "https://rarbg.to/torrent/3i5mj8l",
+			"title": "Marry Me",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366651/poster_opt.jpg",
+			"size": "5.72 GB",
+			"genre": "Comedy, Music, Romance",
 			"resolution": "1080p",
 			"encoding": "H264",
-			"imdb": "https://www.imdb.com/title/tt11286314",
+			"imdb": "https://www.imdb.com/title/tt10223460",
 			"prolific_review": {
-				"mean": 7.18,
-				"std": 1.85
+				"mean": 6.38,
+				"std": 2.23
+			},
+			"rating": "6.2/10"
+		},
+		"Nightmare.Alley.2021.1080p.HMAX.WEBRip.DD5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/1horpeg",
+			"title": "Nightmare Alley",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/366410/poster_opt.jpg",
+			"size": "9.04 GB",
+			"genre": "Crime, Drama, Thriller",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt7740496",
+			"prolific_review": {
+				"mean": 6.83,
+				"std": 1.43
+			},
+			"rating": "7.2/10"
+		},
+		"Red.Rocket.2021.1080p.AMZN.WEBRip.DDP5.1.x264-TEPES": {
+			"url": "https://rarbg.to/torrent/oe5yn9t",
+			"title": "Red Rocket",
+			"year": 2021,
+			"poster": "https://dyncdn2.com/mimages/365104/poster_opt.jpg",
+			"size": "9.52 GB",
+			"genre": "Comedy, Drama",
+			"resolution": "1080p",
+			"encoding": "x264",
+			"imdb": "https://www.imdb.com/title/tt13453006",
+			"prolific_review": {
+				"mean": 6.96,
+				"std": 1.61
 			},
 			"rating": "7.3/10"
 		},
-		"Encanto.2021.1080p.WEBRip.DDP7.1.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/s3pqj5x",
-			"title": "Encanto",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/361069/over_opt.jpg",
-			"size": "7.42 GB",
-			"genre": "Animation, Comedy, Drama, Family, Fantasy, Musical",
+		"Redeeming.Love.2022.1080p.WEBRip.DD5.1.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/esv568k",
+			"title": "Redeeming Love",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/363755/poster_opt.jpg",
+			"size": "6.55 GB",
+			"genre": "Drama, History, Romance",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt2953050",
+			"imdb": "https://www.imdb.com/title/tt11365186",
 			"prolific_review": {
-				"mean": 7.25,
-				"std": 1.74
+				"mean": 6.96,
+				"std": 2.94
 			},
-			"rating": "7.4/10"
+			"rating": "6.6/10"
 		},
-		"Last.Looks.2021.1080p.WEBRip.DD5.1.x264-NOGRP": {
-			"url": "https://rarbg.to/torrent/kiovl3f",
-			"title": "Last Looks",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365447/over_opt.jpg",
-			"size": "5.19 GB",
-			"genre": "Action, Thriller ",
+		"The.In.Between.2022.1080p.AMZN.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/mrg2ix1",
+			"title": "The In Between",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/366650/poster_opt.jpg",
+			"size": "6.67 GB",
+			"genre": "Drama, Romance, Sci-Fi ",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt9244554",
-			"prolific_review": {}
+			"imdb": "https://www.imdb.com/title/tt8851148",
+			"prolific_review": {
+				"mean": 6.44,
+				"std": 2.67
+			}
 		},
-		"Last.Train.to.Christmas.2021.1080p.NOW.WEBRip.DDP5.1.x264-NTb": {
-			"url": "https://rarbg.to/torrent/p93r4ln",
-			"title": "Last Train to Christmas",
+		"The.Kings.Man.2021.1080p.WEBRip.DDP5.1.Atmos.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/p8b4erj",
+			"title": "The Kings Man",
 			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365332/over_opt.jpg",
-			"size": "6.10 GB",
-			"genre": "Comedy, Drama, Fantasy",
+			"poster": "https://dyncdn2.com/mimages/339118/poster_opt.jpg",
+			"size": "6.77 GB",
+			"genre": "Action, Adventure, Thriller",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt14061008",
+			"imdb": "https://www.imdb.com/title/tt6856242",
 			"prolific_review": {
-				"mean": 7.48,
-				"std": 1.98
+				"mean": 6.13,
+				"std": 1.88
 			},
-			"rating": "6.1/10"
+			"rating": "6.5/10"
 		},
-		"Resident.Evil.Welcome.to.Raccoon.City.2021.1080p.AMZN.WEBRip.DDP5.1.x264-CM": {
-			"url": "https://rarbg.to/torrent/63w1fkc",
-			"title": "Resident Evil Welcome to Raccoon City",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365316/over_opt.jpg",
-			"size": "5.50 GB",
-			"genre": "Action, Horror, Sci-Fi",
+		"The.Long.Night.2022.1080p.WEBRip.DD5.1.x264-NOGRP": {
+			"url": "https://rarbg.to/torrent/2uq7kr6",
+			"title": "The Long Night",
+			"year": 2022,
+			"poster": "https://dyncdn2.com/mimages/365852/poster_opt.jpg",
+			"size": "4.50 GB",
+			"genre": "Horror",
 			"resolution": "1080p",
 			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt6920084",
+			"imdb": "https://www.imdb.com/title/tt10509906",
 			"prolific_review": {
-				"mean": 5.6,
-				"std": 2.15
+				"mean": 3.67,
+				"std": 1.86
 			},
-			"rating": "5.2/10"
-		},
-		"The.Matrix.4.Resurrections.2021.1080p.WEB.H264-NAISU": {
-			"url": "https://rarbg.to/torrent/e68w14s",
-			"title": "The Matrix 4 Resurrections",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/344952/over_opt.jpg",
-			"size": "9.35 GB",
-			"genre": "Action, Sci-Fi",
-			"resolution": "1080p",
-			"encoding": "H264",
-			"imdb": "https://www.imdb.com/title/tt10838180",
-			"prolific_review": {
-				"mean": 4.81,
-				"std": 2.22
-			},
-			"rating": "5.8/10"
-		},
-		"Wolf.2021.1080p.AMZN.WEBRip.DDP5.1.x264-CM": {
-			"url": "https://rarbg.to/torrent/5hcbg6j",
-			"title": "Wolf",
-			"year": 2021,
-			"poster": "https://dyncdn2.com/mimages/365353/over_opt.jpg",
-			"size": "8.23 GB",
-			"genre": "Drama, Mystery, Thriller",
-			"resolution": "1080p",
-			"encoding": "x264",
-			"imdb": "https://www.imdb.com/title/tt10698174",
-			"prolific_review": {
-				"mean": 5.44,
-				"std": 3.26
-			},
-			"rating": "6.1/10"
+			"rating": "3.4/10"
 		}
 	},
 	"Notified": {
 		"Being the Ricardos": "2021-12-27T23:02:36.725729+08:00",
 		"Cmon Cmon": "2021-12-27T23:17:40.479937+08:00",
+		"Dont Look Up": "2022-01-03T00:33:29.895794+08:00",
+		"Encanto": "2022-01-03T01:43:19.161618+08:00",
+		"Eternals": "2022-02-16T01:48:19.375052+08:00",
+		"Finch": "2022-01-01T13:24:12.824001+08:00",
+		"Ghostbusters Afterlife": "2022-02-16T01:48:11.294501+08:00",
+		"Harry Potter 20th Anniversary Return to Hogwarts": "2022-01-03T00:27:36.521538+08:00",
+		"Hotel Transylvania 4 Transformania": "2022-02-16T01:48:16.509125+08:00",
+		"House Of Gucci": "2022-02-16T01:48:11.696333+08:00",
+		"Kimi": "2022-02-16T01:48:16.098087+08:00",
 		"Last Looks": "2021-12-27T23:02:35.854081+08:00",
+		"Last Survivors": "2022-02-16T23:33:50.939177+08:00",
 		"Last Train to Christmas": "2021-12-27T23:02:36.467122+08:00",
-		"Wolf": "2021-12-27T23:02:36.158674+08:00"
+		"Marry Me": "2022-02-16T01:48:15.38371+08:00",
+		"Mass": "2021-12-29T09:48:38.952276+08:00",
+		"National Champions": "2021-12-30T14:36:12.438935+08:00",
+		"Nightmare Alley": "2022-02-16T01:48:10.618494+08:00",
+		"Red Rocket": "2022-02-16T01:48:16.918893+08:00",
+		"Redeeming Love": "2022-02-16T23:33:51.207381+08:00",
+		"Seal Team": "2022-01-03T00:27:36.276662+08:00",
+		"The 355": "2022-02-16T01:48:22.755882+08:00",
+		"The Ice Age Adventures of Buck Wild": "2022-02-16T01:48:10.979805+08:00",
+		"The In Between": "2022-02-16T01:51:29.439254+08:00",
+		"The Kings Man": "2022-02-16T01:48:09.957328+08:00",
+		"The Last Duel": "2022-01-03T00:27:36.787935+08:00",
+		"The Long Night": "2022-02-16T23:33:50.587257+08:00",
+		"The Lost Daughter": "2021-12-31T18:39:04.975701+08:00",
+		"The Suicide Squad": "2021-12-30T14:31:58.248762+08:00"
 	},
-	"Time": "2021-12-27T23:17:39.855618+08:00"
+	"Time": "2022-02-16T23:37:09.734465+08:00"
 }

@@ -38,7 +38,7 @@ func RequestImdb(movieCode string, cookie string) *http.Response {
 		log.Fatalln("Request IMDB Error, Response StatusCode: ", resp.StatusCode)
 	} else {
 		// TODO: log control certain packages
-		log.Println("Request IMDB Successful")
+		log.Printf("\"%s\" Request IMDB Successful\n", movieCode)
 	}
 	return resp
 }

@@ -28,15 +28,15 @@ func ParseHomePage(preLeaderboard *c.LeaderboardCache, res io.Reader, rarbgCooki
 	}
 	err = parseTop9(s, &leaderboard, preLeaderboard, rarbgCookie, imdbCookie)
 	if err != nil {
+		log.Fatalln("Parse Top9 failed")
 		return nil, err
 	}
 
 	if len(leaderboard.VideoList) == 0 {
 		log.Fatalln("Parse Leaderboard data failed!")
-	} else if len(leaderboard.Newest9) == 0 {
+	}
+	if len(leaderboard.Newest9) == 0 {
 		log.Fatalln("Parse Newest9 data failed!")
-	} else {
-		log.Println("Parse raw HTML successful")
 	}
 	leaderboard.Time = time.Now()
 	return &leaderboard, nil
@@ -67,37 +67,49 @@ func parseTop9(s *goquery.Selection, curLeaderboard, preLeaderboard *c.Leaderboa
 			if m, ok := preLeaderboard.Newest9[title]; ok {
 				curLeaderboard.Newest9[title] = m
 			} else {
-				curLeaderboard.Newest9[title], err = searchTop9FromBoard(title, rarbgCookie, imdbCookie, preLeaderboard)
-				log.Println(title, "successful grabbed additional info from search")
+				// TODO: grab from video page currently description is fix text
+				// TODO: parse from video main page
+				// rarbgUrl, ok := s.Attr("href")
+				rarbgUrl := "http://rarbg.to/torrents.php?search=" + title +
+					"&category%5B%5D=17&category%5B%5D=44&category%5B%5D=45&category%5B%5D=47&category%5B%5D=50&category%5B%5D=51&category%5B%5D=52&category%5B%5D=42&category%5B%5D=46&category%5B%5D=54"
+				curLeaderboard.Newest9[title], err = searchTop9FromMain(title, rarbgUrl, rarbgCookie, imdbCookie, preLeaderboard)
+
+				if err != nil {
+					log.Println("Can't get rarbgUrl: %s\n", title)
+					log.Fatalln(err)
+				} else {
+					log.Printf("\"%s\" successful grabbed additional info from search\n", title)
+				}
 			}
 		}
 	})
 	if err != nil {
+		log.Fatalln("Search Top9 from main page failed")
 		return err
 	} else {
 		return nil
 	}
 }
 
-func searchTop9FromBoard(title, rarbgCookie, imdbCookie string, preLeaderboard *c.LeaderboardCache) (*c.VideoInfo, error) {
+// If it doesn't exist in leaderboard, search the movie and use parseLeaderBoard to parse the info from there
+func searchTop9FromMain(title, url, rarbgCookie, imdbCookie string, preLeaderboard *c.LeaderboardCache) (*c.VideoInfo, error) {
 	var tmpLeaderboard c.LeaderboardCache
 	tmpLeaderboard.VideoList = map[string]*c.VideoInfo{} // avoid panic: assignment to entry in nil map
 	tmpLeaderboard.Newest9 = map[string]*c.VideoInfo{}
-
-	// https://rarbg.to/torrents.php?search=Last.Looks.2021.1080p.WEBRip.DD5.1.x264-NOGRP
-	url := fmt.Sprintf("https://rarbg.to/torrents.php?search=%s", title)
 	content := client.RequestRarbg(url, rarbgCookie)
 	baseSelectors := "table:nth-child(6) td:nth-child(2)"
 	doc, _ := goquery.NewDocumentFromReader(content.Body)
 	s := doc.Find(baseSelectors)
 	err := parseLeaderBoard(s, &tmpLeaderboard, preLeaderboard, imdbCookie)
 	if err != nil {
+		log.Fatalln("searchTop9FromMain::parseLeaderBoard failed")
 		return nil, err
 	}
 	return tmpLeaderboard.VideoList[title], nil
 }
 
 func parseLeaderBoard(s *goquery.Selection, curLeaderboard, preLeaderboard *c.LeaderboardCache, imdbCookie string) error {
+	// TODO: not found won't log out ERROR
 	s.Find("table.lista2t tr.lista2 td:nth-child(2) a:nth-child(1)").Each(func(i int, s *goquery.Selection) {
 		var video c.VideoInfo
 		title := s.Contents().Text()
@@ -130,7 +142,7 @@ func parseLeaderBoard(s *goquery.Selection, curLeaderboard, preLeaderboard *c.Le
 			video.Url = fmt.Sprintf("https://rarbg.to%s", video.Url)
 			curLeaderboard.VideoList[title] = &video
 		} else {
-			log.Println(m.Title, " is already in Previous Leaderboard")
+			log.Printf("\"%s\" is already in Previous Leaderboard\n", m.Title)
 			curLeaderboard.VideoList[title] = m
 		}
 	})

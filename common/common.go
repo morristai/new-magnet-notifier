@@ -26,6 +26,11 @@ type Config struct {
 		Channels []string
 		Members  []string
 	}
+	Log struct {
+		Path    string
+		Level   string
+		IsDebug bool
+	}
 }
 
 type Headers struct {
@@ -49,7 +54,7 @@ type Headers struct {
 	UpgradeInsecureRequests string `header:"Upgrade-Insecure-Requests"`
 }
 
-type LeaderboardCache struct {
+type LeaderboardCache struct { // Should I use pointer inside a struct?
 	VideoList map[string]*VideoInfo
 	Newest9   map[string]*VideoInfo
 	Notified  map[string]time.Time // send discord notification time

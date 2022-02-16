@@ -19,7 +19,7 @@ func CronJobs(dg *discordgo.Session) {
 	s.Every(30).Minute().Tag("1080p", "movie").Do(highest1080p, dg)
 	//s.Every(30).Minute().Tag("2160p", "movie").Do(highest2160p, dg)
 	s.RunByTag("1080p")
-	log.Println("Start cron job by tags: [1080p]")
+	log.Println("Start cron job by tags: \"1080p\"")
 	s.StartAsync() // starts the scheduler and blocks current execution path
 }
 
@@ -32,12 +32,12 @@ func highest1080p(dg *discordgo.Session) {
 	}
 	curLeaderBoard, leaderBoard, top9, err := processor(config, config.Rarbg.Movie.Url1080p, config.Cache.Json1080p, preLeaderBoard)
 	if err != nil {
-		log.Panicln(err)
+		log.Fatalln(err)
 	}
 	curLeaderBoard.Notified = preLeaderBoard.Notified // avoid further for loop append
 	// Leader Board
 	if len(leaderBoard) != 0 {
-		log.Printf("Found %d 1080p new in leader board", len(leaderBoard))
+		log.Printf("Found %d 1080p new in leader board\n", len(leaderBoard))
 		for _, m := range leaderBoard {
 			if _, ok := curLeaderBoard.Notified[m.Title]; !ok {
 				message := m.GenDiscordMessage()
@@ -48,17 +48,16 @@ func highest1080p(dg *discordgo.Session) {
 					}
 				}
 				curLeaderBoard.Notified[m.Title] = time.Now() // set Discord notified
-				log.Printf("Send [%s] to Discord %v successful\n", m.Title, config.Discord.Channels)
+				log.Printf("Send \"%s\" to Discord %v successful\n", m.Title, config.Discord.Channels)
 			} else {
-				log.Println(m.Title, "is already been notified")
+				log.Printf("\"%s\" is already been notified\n", m.Title)
 			}
 		}
-	} else {
-		log.Println("No new movie found in [1080p Leader Board]")
 	}
+
 	// Newest Top 9
 	if len(top9) > 0 {
-		log.Printf("Found %d movies in Top9", len(top9))
+		// log.Printf("Found %d movies in Top9\n", len(top9))
 		for _, m := range top9 {
 			// Check if notified exist already
 			if _, ok := curLeaderBoard.Notified[m.Title]; !ok {
@@ -69,15 +68,15 @@ func highest1080p(dg *discordgo.Session) {
 						log.Fatalln(err)
 					}
 				}
-				log.Printf("Send [%s] to Discord %v successful\n", m.Title, config.Discord.Channels)
+				log.Printf("Send \"%s\" to Discord %v successful\n", m.Title, config.Discord.Channels)
 				curLeaderBoard.Notified[m.Title] = time.Now()
 			} else {
-				log.Println(m.Title, "already been notified")
+				log.Printf("\"%s\" already been notified\n", m.Title)
 			}
 		}
-	} else {
-		log.Println("No new movie found in [1080p Leader Board]")
 	}
+	log.Printf("Found \"%d\" new movies in \"Newest Top 9\"\n", len(top9))
+	log.Printf("Found \"%d\" new movies in \"1080p Leader Board\"\n", len(leaderBoard))
 
 	// TODO: scheduler to clear cache
 	err = parser.Save(config.Cache.Json1080p, curLeaderBoard)
@@ -109,6 +108,7 @@ func processor(config *c.Config, url string, cachePath string, preLeaderBoard *c
 	}
 	curLeaderBoard, err := parser.ParseHomePage(preLeaderBoard, content.Body, config.Rarbg.Headers.Cookie, config.Imdb.Cookie)
 	if err != nil {
+		log.Fatalln("ParseHomePage failed")
 		return nil, nil, nil, err
 	}
 	// Compare LeaderBoard VideoList
@@ -123,7 +123,7 @@ func processor(config *c.Config, url string, cachePath string, preLeaderBoard *c
 		for k := range curLeaderBoard.Newest9 {
 			_, ok := preLeaderBoard.Newest9[k]
 			if ok == true {
-				log.Println(k, "is already in the leader board")
+				log.Printf("\"%s\" is already in the leader board", k)
 			} else {
 				newFoundTop9 = append(newFoundTop9, curLeaderBoard.Newest9[k])
 			}

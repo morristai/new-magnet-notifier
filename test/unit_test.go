@@ -12,13 +12,14 @@ func TestParserHighest(t *testing.T) {
 	config := c.ReadConfig("./resources/application.yml")
 	content := client.RequestRarbg(config.Rarbg.Movie.Url1080p, config.Cache.Json1080p)
 	var preLeaderBoard *c.LeaderboardCache
-	//contentBytes, _ := io.ReadAll(content.Body)
-	//os.WriteFile("./cache/rarbg_response.html", contentBytes, 0644)
+	err := parser.Load(config.Cache.Json1080p, &preLeaderBoard)
+	// contentBytes, _ := io.ReadAll(content.Body)
+	// os.WriteFile("./cache/rarbg_response.html", contentBytes, 0644)
 	leaderBoard, _ := parser.ParseHomePage(preLeaderBoard, content.Body, config.Rarbg.Headers.Cookie, config.Imdb.Cookie)
 	if len(leaderBoard.VideoList) != 15 {
 		t.Error("movie list should be 15")
 	}
-	err := parser.Save("./cache/1080p.json", leaderBoard)
+	err = parser.Save("./cache/1080p.json", leaderBoard)
 	if err != nil {
 		t.Error("Save to local cache error", err)
 	}
@@ -56,10 +57,4 @@ func TestEquality(t *testing.T) {
 			}
 		}
 	}
-}
-
-func TestAll(t *testing.T) {
-	TestParserHighest(t)
-	TestEquality(t)
-	TestEquality(t)
 }

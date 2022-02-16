@@ -18,34 +18,36 @@ func (v *VideoInfo) GenDiscordMessage() discordgo.MessageEmbed {
 
 	data := discordgo.MessageEmbed{
 		Title:       fmt.Sprintf("🍿 %s", v.Title),
+		Type:        "rich",
 		URL:         v.Url,
 		Description: v.GenDiscordDescription(),
 		Image:       &poster,
+		Fields:      v.GenDiscordFields(map[string]bool{"Resolution": true, "Encoding": true, "Rating": true}),
 	}
 	return data
 }
 
 func (v *VideoInfo) GenDiscordDescription() string {
-	description := fmt.Sprintf(
-		// TODO: 1. IMDB emoji 2. Table view
-		"Year: **%d**\nGenre: **%s**\n",
-		v.Year, v.Genre,
-	)
-	if v.ProlificReview.Mean != 0 {
-		description += fmt.Sprintf("PReview: **%.2f/%.2f**", v.ProlificReview.Mean, v.ProlificReview.Std)
-	}
-
-	optionalFields := map[string]bool{"Resolution": true, "Encoding": true, "Rating": true}
-	description += v.validFields(optionalFields)
+	// TODO: grab from video main page
+	description := ""
 	description += fmt.Sprintf(" **%s**\n", fmt.Sprintf("[IMDB](%s)", v.ImdbUrl))
-	description += fmt.Sprintf("Size: **%s**\n", v.Size)
-
 	return description
 }
 
-func (v *VideoInfo) validFields(optionalFields map[string]bool) string {
-	// If struct field not nil, then append to description
-	result := ""
+func (v *VideoInfo) GenDiscordFields(optionalFields map[string]bool) []*discordgo.MessageEmbedField {
+	// If struct field not nil, then append to fields
+	var result []*discordgo.MessageEmbedField
+
+	if v.ProlificReview.Mean != 0 && v.ProlificReview.Std != 0 {
+		result = append(result, &discordgo.MessageEmbedField{Name: "PReview", Value: fmt.Sprintf("**%.2f/%.2f**", v.ProlificReview.Mean, v.ProlificReview.Std)})
+	}
+
+	// mandatory fields
+	result = append(result, &discordgo.MessageEmbedField{Name: "Year", Value: fmt.Sprintf("%v", v.Year), Inline: true})
+	result = append(result, &discordgo.MessageEmbedField{Name: "Genre", Value: fmt.Sprintf("%v", v.Genre), Inline: true})
+	result = append(result, &discordgo.MessageEmbedField{Name: "Size", Value: fmt.Sprintf("%v", v.Size), Inline: true})
+
+	// optional fields
 	s := reflect.ValueOf(v).Elem()
 	t := s.Type()
 	for i := 0; i < t.NumField(); i++ {
@@ -54,14 +56,15 @@ func (v *VideoInfo) validFields(optionalFields map[string]bool) string {
 		_, ok := optionalFields[name]
 		if ok && !field.IsZero() {
 			value := s.FieldByName(name).Interface()
-			result += fmt.Sprintf("\n%s: **%s**", name, value)
+			result = append(result, &discordgo.MessageEmbedField{Name: name, Value: fmt.Sprintf("%v", value), Inline: true})
 		}
 	}
 	return result
 }
 
-func ReadConfig(filePath string) *Config {
-	buf, err := ioutil.ReadFile(filePath)
+func ReadConfig(path string) *Config {
+	//viper.AddConfigPath(path)
+	buf, err := ioutil.ReadFile(path)
 	if err != nil {
 		log.Fatalln(err)
 	}
