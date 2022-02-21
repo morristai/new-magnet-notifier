@@ -3,7 +3,7 @@
 
 A Discord bot that auto sends notifications when there's new movies
 
-<img src="https://i.imgur.com/WtNUB2b.png" width="300" />
+<img src="https://user-images.githubusercontent.com/10728152/154961582-20c65070-7010-4f61-ba77-f5622a64733d.png" width="400" />
 
 ## Components
 ### Parser
@@ -30,10 +30,11 @@ A Discord bot that auto sends notifications when there's new movies
 
 ### TODO
 1. Better error handling
-2. Ansible
-3. Github Action
-4. check 4K
+2. Add Ansible
+3. Add Github Action
+4. Check 4K
 5. Genre emoji map
+6. Check all resolutions of the film
 
 ## Others problems during development
 ### Why not use Ordered Map to keep tracking notified list?
