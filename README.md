@@ -1,4 +1,4 @@
-# Rarbg Notifier
+# New Seed Notifier
 > **Disclaimer**: This repository is for educational purposes only. This tool do not promote or encourages any illegal pirated action and it was not made for criminal purposes.
 
 A Discord bot that auto sends notifications when there's new movies
