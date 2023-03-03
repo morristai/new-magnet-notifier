@@ -1,0 +1,23 @@
+rarbg:
+  headers:
+    cookie: ""
+  movie:
+    url2160p: "https://rarbg.to/torrents.php?category=14;48;17;44;45;47;50;51;52;42;46;54&search=2160p&order=seeders&by=DESC"
+    url1080p: "https://rarbg.to/torrents.php?category=14;48;17;44;45;47;50;51;52;42;46;54&search=1080p&order=seeders&by=DESC"
+  tvshow:
+    url1080p: "https://rarbg.to/torrents.php?category=18;41;49&search=1080p&order=seeders&by=DESC"
+imdb:
+  cookie: ""
+cache:
+  json1080p: "./cache/1080p.json"
+  json2160p: "./cache/2160p.json"
+discord:
+  token: ""
+  channels: 
+    - ""
+  members: 
+    - ""
+log:
+  path: "./log/rarbg-notifier-debug.log"
+  level: "DEBUG"
+  isdebug: true

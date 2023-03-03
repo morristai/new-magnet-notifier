@@ -23,6 +23,7 @@ type Config struct {
 		Json2160p string
 	}
 	Discord struct {
+		Token    string
 		Channels []string
 		Members  []string
 	}

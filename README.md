@@ -1,4 +1,4 @@
-# New Seed Notifier
+# New Magnet Notifier
 > **Disclaimer**: This repository is for educational purposes only. This tool do not promote or encourages any illegal pirated action and it was not made for criminal purposes.
 
 A Discord bot that auto sends notifications when there's new movies
@@ -41,3 +41,7 @@ A Discord bot that auto sends notifications when there's new movies
 As an issue pointed out here: [GitHub Issue](https://github.com/elliotchance/orderedmap/issues/12)
 1. The order will be lost when serializing (and unserializing). There's no way around that because **Go sorts maps for JSON output**.
 2. All of your keys must be strings.
+
+## Workflow
+1. main -> run bot main process discord/bot.go -> trigger cron job (task/task.go)
+2. task(read config) -> processor (request Rarbg) -> parser/parser.go
